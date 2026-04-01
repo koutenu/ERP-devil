@@ -1,0 +1,12 @@
+{
+  "name": "electronics-platform-backend",
+  "version": "1.0.0",
+  "description": "\u7535\u5b50\u5236\u9020\u4e1a\u591a\u667a\u80fd\u4f53\u534f\u540c\u5e73\u53f0\u540e\u7aefAPI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
