@@ -4,10 +4,13 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "numInstances": 1,
+    "numReplicas": 1,
     "restartPolicyType": "ON_FAILURE",
-    "restartPolicyLimit": 5,
+    "restartPolicyMaxRetries": 3,
     "startCommand": "node server.js",
-    "port": 8080
+    "expose": {
+      "port": 8080,
+      "domain": "erpdevil"
+    }
   }
 }
