@@ -67,14 +67,11 @@ function readBody(req) {
   });
 }
 
-function json(res, data, status = 200) {
-  res.writeHead(status, {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type,Authorization',
-  });
-  res.end(JSON.stringify(data));
+// ============ 根路径 / ============
+if (url === "/" || url === "") {
+  res.writeHead(200, { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" });
+  res.end(JSON.stringify({ name: "电子制造业多智能体协同平台 API", version: "1.0.0", status: "running", docs: "/api/auth/login" }));
+  return;
 }
 
 function parseBody(req) {
